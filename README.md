@@ -1,36 +1,35 @@
-<p align="center">
-  <img src="assets/signal-study.gif" alt="LAILOW: animated chart of fictional NOVA campaign spend reaching $383.25 while sales remain zero" width="100%">
-</p>
+<img src="assets/lailow-cover-v5.png" alt="LAILOW — campaign intelligence" width="100%">
 
-<p align="center"><strong>Campaign data → explainable signals → a decision worth investigating.</strong></p>
+<p align="center"><strong>My workspace for campaign performance, visual exploration and question answering.</strong></p>
 
-*I plotted the public demo’s generated records to make this animation. It is an illustrated data study, not a screenshot of my private app. [View the static version](assets/signal-study.png).*
+<p align="center"><a href="#product-walkthrough">The Streamlit interface</a> · <a href="#architecture">Architecture</a> · <a href="#try-the-synthetic-demo">Run the public demo</a></p>
 
-<p align="center">
-  <a href="#try-the-synthetic-demo">Run the demo</a> ·
-  <a href="#product-walkthrough">Walkthrough</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#engineering-notes">Engineering notes</a>
-</p>
-
-## The idea
-
-I'm building LAILOW to bring campaign metrics, visual inspection and question answering into one workflow. I want to make it easier to move from a broad performance view to a specific question worth investigating. I keep the original source and business data private.
-
-In this **public case study**, I explain the problem and architecture, then share a small **independently written, synthetic-data** analytics slice. I made the demo runnable with only Python's standard library. It does not include the full application or connect to advertising APIs. I haven't established production deployment or measured commercial impact through this demo.
+I'm developing **LAILOW**, a Python and Streamlit application that connects campaign metrics, interactive analysis and an assistant. This repository is its public case study. I keep the original application source, integrations and business data in my private repository.
 
 ## Product walkthrough
 
-I organize the product around four steps. This walkthrough describes the intended workflow; the public executable implements the structured analytics slice.
+The images below show **my actual Streamlit interface running with deterministic synthetic data**. They are application screenshots. The cover is generated brand artwork.
 
-| Step | What a user does | What the system exposes |
-| :--- | :--- | :--- |
-| **01 · Bring data together** | Load campaign and product performance records. | A common view of spend, sales, orders, clicks and impressions. |
-| **02 · Find the shape** | Compare spend, sales, CTR and ACOS across products and time. | Tables and charts that make unusual patterns visible. |
-| **03 · Ask a question** | Ask for a sales summary or inspect a campaign. | Query routing to analytic or retrieval paths in the private prototype. |
-| **04 · Decide what to inspect** | Review a signal and its underlying metrics. | A traceable starting point for human review, not an automatic bid change. |
+<img src="assets/dashboard-overview.jpg" alt="Actual LAILOW Streamlit overview: synthetic campaign totals, performance chart and campaign spend ranking" width="100%">
 
-My private prototype has a Streamlit dashboard with metric heatmaps, a spend-versus-sales chart, a 3D spend view and an assistant panel. I separate data/API handling, sales analysis, retrieval and the assistant loop. Some paths depend on local models, vector stores and data files. I don't represent every path as integrated or production ready.
+### One workspace, four ways to inspect performance
+
+| View | What I built into the interface |
+| :--- | :--- |
+| **Overview** | Spend, attributed sales, ROAS and ACOS; a shared timeline; campaign rankings and signals to review. |
+| **Metric explorer** | Product-by-date heatmaps for spend, sales, CTR and ACOS, with actual and normalized views. |
+| **Spend landscape** | An interactive 3D view of spend across products and time. |
+| **Assistant** | Dataset questions in synthetic mode, plus an explicit connection to the original private model backend when its local dependencies and data are available. |
+
+<img src="assets/dashboard-landscape.jpg" alt="LAILOW's actual interactive 3D spend landscape, shown with fictional campaign records" width="100%">
+
+I apply the same campaign, product, search-term and date selection across the dashboard. I recompute CTR and ACOS from aggregated totals, preserve undefined ratios, handle empty selections and support filtered CSV export. The dashboard starts with **168 fictional records across six campaigns**, so opening it does not require private files or model services.
+
+**Assistant scope.** Synthetic-mode answers use deterministic calculations and are labelled accordingly. My existing private assistant uses local models and retrieval stores; it has a separate data context and does not automatically inherit dashboard filters. I keep that distinction visible in the interface. I have not established production deployment or measured commercial impact.
+
+### Public demo and private application
+
+The screenshots represent the private Streamlit application. The **separate public demo below** is an independently written, standard-library analytics slice with 42 fictional records. It lets someone run and inspect the calculations without receiving private source, integrations or business data.
 
 ## Architecture
 
