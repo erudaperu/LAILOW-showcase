@@ -1,0 +1,46 @@
+{
+  "records": 42,
+  "summary": [
+    {
+      "campaign": "NOVA / Exploration",
+      "spend": 383.25,
+      "sales": 0.0,
+      "orders": 0,
+      "clicks": 278,
+      "impressions": 11683,
+      "acos": null,
+      "roas": 0.0,
+      "ctr": 0.0238
+    },
+    {
+      "campaign": "ORBIT / Exact",
+      "spend": 341.25,
+      "sales": 1716.0,
+      "orders": 44,
+      "clicks": 362,
+      "impressions": 13363,
+      "acos": 0.1989,
+      "roas": 5.0286,
+      "ctr": 0.0271
+    },
+    {
+      "campaign": "ORBIT / Discovery",
+      "spend": 257.25,
+      "sales": 810.0,
+      "orders": 30,
+      "clicks": 334,
+      "impressions": 12803,
+      "acos": 0.3176,
+      "roas": 3.1487,
+      "ctr": 0.0261
+    }
+  ],
+  "signals": [
+    {
+      "campaign": "NOVA / Exploration",
+      "signal": "spend_without_sales",
+      "spend": 383.25,
+      "acos": null
+    }
+  ]
+}

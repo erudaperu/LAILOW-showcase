@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="LAILOW synthetic campaign intelligence showcase" width="100%">
+  <img src="assets/signal-study.gif" alt="LAILOW: animated chart of fictional NOVA campaign spend reaching $383.25 while sales remain zero" width="100%">
 </p>
 
 <p align="center"><strong>Campaign data → explainable signals → a decision worth investigating.</strong></p>
+
+*I plotted the public demo’s generated records to make this animation. It is an illustrated data study, not a screenshot of my private app. [View the static version](assets/signal-study.png).*
 
 <p align="center">
   <a href="#try-the-synthetic-demo">Run the demo</a> ·
@@ -19,9 +21,7 @@ In this **public case study**, I explain the problem and architecture, then shar
 
 ## Product walkthrough
 
-<p align="center"><img src="assets/walkthrough.svg" alt="Illustrative LAILOW journey using synthetic data: ingest records, explore campaign spend, ask a question and review an explainable signal" width="100%"></p>
-
-*Illustrative workflow using fictional records; this graphic is not a screenshot of the private application.*
+I organize the product around four steps. This walkthrough describes the intended workflow; the public executable implements the structured analytics slice.
 
 | Step | What a user does | What the system exposes |
 | :--- | :--- | :--- |
@@ -80,6 +80,7 @@ The CSV schema is `day,campaign,product,spend,sales,orders,clicks,impressions`, 
 ## Engineering notes
 
 - I separate fixture generation, validation, aggregation and presentation so I can inspect and test the calculations independently.
+- I generate the finite animation directly from the public fixture with [this optional renderer](tools/render_signal_study.py). It requires Pillow 10.1+; the analytics demo itself remains standard-library-only. The [plotted totals](assets/signal-study-data.json) are available separately.
 - I use twelve standard-library tests to cover deterministic generation, aggregation, ordering, division-by-zero cases, signal boundaries, invalid input and CSV round trips.
 - In the private prototype, I combine Python, pandas, Streamlit, vector retrieval and local model tooling. I keep its source tree and data out of this public repository.
 - Current limitations: the demo has no live API, model inference, deployment target or benchmark. Its synthetic signals illustrate an analysis workflow; they do not validate business outcomes.
