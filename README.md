@@ -1,4 +1,4 @@
-<img src="assets/lailow-cover-v5.png" alt="LAILOW — campaign intelligence" width="100%">
+<img src="assets/lailow-product-v6.png" alt="LAILOW — campaign intelligence" width="100%">
 
 <p align="center"><strong>My workspace for campaign performance, visual exploration and question answering.</strong></p>
 
@@ -8,7 +8,7 @@ I'm developing **LAILOW**, a Python and Streamlit application that connects camp
 
 ## Product walkthrough
 
-The images below show **my actual Streamlit interface running with deterministic synthetic data**. They are application screenshots. The cover is generated brand artwork.
+The images below show **my actual Streamlit interface running with deterministic synthetic data**. They are application screenshots. The cover is a designed composition incorporating that same synthetic-data interface.
 
 <img src="assets/dashboard-overview.jpg" alt="Actual LAILOW Streamlit overview: synthetic campaign totals, performance chart and campaign spend ranking" width="100%">
 
