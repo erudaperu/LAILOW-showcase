@@ -19,6 +19,10 @@ This **public case study** shows the problem, the system shape and a small **ind
 
 ## Product walkthrough
 
+<p align="center"><img src="assets/walkthrough.svg" alt="Illustrative LAILOW journey using synthetic data: ingest records, explore campaign spend, ask a question and review an explainable signal" width="100%"></p>
+
+*Illustrative workflow using fictional records; this graphic is not a screenshot of the private application.*
+
 | Step | What a user does | What the system exposes |
 | :--- | :--- | :--- |
 | **01 · Bring data together** | Load campaign and product performance records. | A common view of spend, sales, orders, clicks and impressions. |
