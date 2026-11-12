@@ -13,9 +13,9 @@
 
 ## The idea
 
-LAILOW is a private exploration of an assistant for advertising and sales analysis. It brings campaign metrics, visual inspection and question answering into one workflow so a person can move from a broad performance view to a specific question. The original working repository contains private source and business data; it remains private.
+I'm building LAILOW to bring campaign metrics, visual inspection and question answering into one workflow. I want to make it easier to move from a broad performance view to a specific question worth investigating. I keep the original source and business data private.
 
-This **public case study** shows the problem, the system shape and a small **independently written, synthetic-data** analytics slice. It is deliberately runnable with only Python's standard library. The demo is not the full application, is not connected to advertising APIs, and does not claim production deployment or measured commercial impact.
+In this **public case study**, I explain the problem and architecture, then share a small **independently written, synthetic-data** analytics slice. I made the demo runnable with only Python's standard library. It does not include the full application or connect to advertising APIs. I haven't established production deployment or measured commercial impact through this demo.
 
 ## Product walkthrough
 
@@ -30,19 +30,19 @@ This **public case study** shows the problem, the system shape and a small **ind
 | **03 · Ask a question** | Ask for a sales summary or inspect a campaign. | Query routing to analytic or retrieval paths in the private prototype. |
 | **04 · Decide what to inspect** | Review a signal and its underlying metrics. | A traceable starting point for human review, not an automatic bid change. |
 
-The private prototype has a Streamlit dashboard with metric heatmaps, a spend-versus-sales chart, a 3D spend view and an assistant panel. Its Python code separates data/API handling, sales analysis, retrieval and the assistant loop. Some paths depend on local models, vector stores and data files. This case study does not represent every path as integrated or production ready.
+My private prototype has a Streamlit dashboard with metric heatmaps, a spend-versus-sales chart, a 3D spend view and an assistant panel. I separate data/API handling, sales analysis, retrieval and the assistant loop. Some paths depend on local models, vector stores and data files. I don't represent every path as integrated or production ready.
 
 ## Architecture
 
 <p align="center"><img src="assets/architecture.svg" alt="Conceptual LAILOW architecture: data sources feed preparation and storage; analysis and retrieval feed a query router and dashboard" width="100%"></p>
 
-**Conceptual map of the private prototype.** Data/API adapters feed preparation and stored records. A sales-analysis path computes answers from structured metrics; a retrieval path uses embeddings and a vector store; a query router chooses a response path. Streamlit provides the dashboard and assistant interface. The public demo below isolates only the structured-metric path and uses generated records instead of private integrations.
+**How I separate the system.** This is a conceptual map of my private prototype, alongside the implemented public demo path. Data/API adapters feed preparation and stored records. A sales-analysis path computes answers from structured metrics; a retrieval path uses embeddings and a vector store; a query router chooses a response path. Streamlit provides the dashboard and assistant interface. In the public demo below, I isolate only the structured-metric path and use generated records instead of private integrations.
 
 ### Boundaries worth understanding
 
-- **Metrics are explicit:** ACOS = spend ÷ sales, ROAS = sales ÷ spend, CTR = clicks ÷ impressions. Undefined denominators are reported as unavailable rather than silently replaced.
-- **Signals are review prompts:** the synthetic demo uses illustrative thresholds. A high ACOS or spend without sales is a cue to inspect context, not a recommendation to change bids.
-- **Privacy is a design constraint:** no client identifiers, API credentials, private prompts, real campaign records or original private code are published here.
+- **I keep metrics explicit:** ACOS = spend ÷ sales, ROAS = sales ÷ spend, CTR = clicks ÷ impressions. Undefined denominators are reported as unavailable rather than silently replaced.
+- **I use signals as review prompts:** the synthetic demo uses illustrative thresholds. A high ACOS or spend without sales is a cue to inspect context, not a recommendation to change bids.
+- **I keep the public boundary clear:** I publish no client identifiers, API credentials, private prompts, real campaign records or original private code here.
 
 ## Try the synthetic demo
 
@@ -68,7 +68,7 @@ REVIEW SIGNALS
 • NOVA / Exploration: spend without sales
 ```
 
-Export the fixture or inspect machine-readable output:
+I also included fixture export and machine-readable output:
 
 ```bash
 python -m lailow_demo --write-sample sample.csv
@@ -79,9 +79,9 @@ The CSV schema is `day,campaign,product,spend,sales,orders,clicks,impressions`, 
 
 ## Engineering notes
 
-- The standalone demo has separate fixture, validation, aggregation and presentation modules. That separation makes the metric calculations easy to inspect and test.
-- Twelve standard-library tests cover deterministic generation, aggregation, ordering, division-by-zero cases, signal boundaries, invalid input and CSV round trips.
-- The private prototype combines Python, pandas, Streamlit, vector retrieval and local model tooling. This public repository intentionally does not mirror its source tree or data.
+- I separate fixture generation, validation, aggregation and presentation so I can inspect and test the calculations independently.
+- I use twelve standard-library tests to cover deterministic generation, aggregation, ordering, division-by-zero cases, signal boundaries, invalid input and CSV round trips.
+- In the private prototype, I combine Python, pandas, Streamlit, vector retrieval and local model tooling. I keep its source tree and data out of this public repository.
 - Current limitations: the demo has no live API, model inference, deployment target or benchmark. Its synthetic signals illustrate an analysis workflow; they do not validate business outcomes.
 
-**Built and documented by Eren Arikan.**
+**Eren Arikan · [My GitHub](https://github.com/erudaperu)**
