@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">LAILOW campaign intelligence</title>
+  <desc id="desc">Dark editorial banner with a synthetic campaign analytics preview and a review signal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0B1428"/><stop offset="1" stop-color="#152C37"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#7EF2C5"/><stop offset="1" stop-color="#9AD7FF"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="50"/></filter>
+  </defs>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="1135" cy="-30" r="220" fill="#2A8E8B" opacity=".17" filter="url(#glow)"/>
+  <circle cx="280" cy="465" r="210" fill="#395FA7" opacity=".14" filter="url(#glow)"/>
+  <path d="M0 400 H1200 M0 320 H1200 M0 240 H1200 M0 160 H1200 M0 80 H1200 M80 0 V480 M160 0 V480 M240 0 V480 M320 0 V480 M400 0 V480 M480 0 V480 M560 0 V480 M640 0 V480 M720 0 V480 M800 0 V480 M880 0 V480 M960 0 V480 M1040 0 V480 M1120 0 V480" fill="none" stroke="#D8F9F1" stroke-opacity=".035"/>
+  <rect x="52" y="47" width="138" height="28" rx="14" fill="#73E8BD" fill-opacity=".11" stroke="#7EF2C5" stroke-opacity=".5"/>
+  <text x="68" y="66" fill="#90F0D0" font-size="12" font-family="Arial,sans-serif" font-weight="700" letter-spacing="2.2">CASE STUDY 01</text>
+  <text x="52" y="174" fill="#F3F8F7" font-size="77" font-family="Arial,sans-serif" font-weight="700" letter-spacing="-4">LAILOW</text>
+  <rect x="54" y="194" width="115" height="5" rx="2.5" fill="url(#accent)"/>
+  <text x="52" y="249" fill="#D8E9E8" font-size="27" font-family="Arial,sans-serif" font-weight="600">From campaign noise</text>
+  <text x="52" y="285" fill="#D8E9E8" font-size="27" font-family="Arial,sans-serif" font-weight="600">to explainable signals.</text>
+  <text x="52" y="344" fill="#A9C2C2" font-size="17" font-family="Arial,sans-serif">Analytics · retrieval · human review</text>
+  <text x="52" y="428" fill="#83A2A4" font-size="12" font-family="Arial,sans-serif" letter-spacing="1.3">PRIVATE PRODUCT CONCEPT   /   PUBLIC SYNTHETIC DEMO</text>
+  <rect x="642" y="50" width="506" height="376" rx="22" fill="#12202E" stroke="#5A8D91" stroke-opacity=".4"/>
+  <rect x="666" y="73" width="458" height="36" rx="10" fill="#1A3440"/>
+  <circle cx="685" cy="91" r="4" fill="#7EF2C5"/>
+  <text x="700" y="96" fill="#B7D5D4" font-size="12" font-family="Arial,sans-serif" font-weight="700" letter-spacing="1.5">SIGNAL BOARD</text>
+  <text x="1035" y="96" fill="#719C9E" font-size="11" font-family="Arial,sans-serif">SYNTHETIC</text>
+  <text x="671" y="145" fill="#8FAFB1" font-size="12" font-family="Arial,sans-serif" letter-spacing="1">CAMPAIGN</text>
+  <text x="957" y="145" fill="#8FAFB1" font-size="12" font-family="Arial,sans-serif" letter-spacing="1">SPEND</text>
+  <text x="1070" y="145" fill="#8FAFB1" font-size="12" font-family="Arial,sans-serif" letter-spacing="1">ACOS</text>
+  <path d="M666 159 H1124 M666 221 H1124 M666 283 H1124 M666 345 H1124" stroke="#4C7379" stroke-opacity=".42"/>
+  <text x="672" y="195" fill="#F2F8F7" font-size="16" font-family="Arial,sans-serif">ORBIT / Exact</text>
+  <text x="956" y="195" fill="#D8E8E7" font-size="15" font-family="Arial,sans-serif">$341</text>
+  <text x="1072" y="195" fill="#90F0D0" font-size="15" font-family="Arial,sans-serif">19.9%</text>
+  <text x="672" y="257" fill="#F2F8F7" font-size="16" font-family="Arial,sans-serif">ORBIT / Discovery</text>
+  <text x="956" y="257" fill="#D8E8E7" font-size="15" font-family="Arial,sans-serif">$257</text>
+  <text x="1072" y="257" fill="#C7DED8" font-size="15" font-family="Arial,sans-serif">31.8%</text>
+  <text x="672" y="319" fill="#F2F8F7" font-size="16" font-family="Arial,sans-serif">NOVA / Exploration</text>
+  <text x="956" y="319" fill="#D8E8E7" font-size="15" font-family="Arial,sans-serif">$383</text>
+  <text x="1072" y="319" fill="#D8E8E7" font-size="15" font-family="Arial,sans-serif">—</text>
+  <rect x="666" y="362" width="458" height="42" rx="9" fill="#F8C779" fill-opacity=".1" stroke="#F8C779" stroke-opacity=".32"/>
+  <circle cx="687" cy="383" r="6" fill="#F8C779"/>
+  <text x="704" y="388" fill="#F8D99D" font-size="13" font-family="Arial,sans-serif" font-weight="600">REVIEW SIGNAL   ·   spend without sales</text>
+</svg>
